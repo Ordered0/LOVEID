@@ -18,18 +18,10 @@ const object = require('./script.js');
 // Creates the authenticated HTTP client
 let Google = new DemoGeneric();
 
-// app.post('/submit', (req, res) => {
-//     const NOME = req.body.NOME;
-//     const CATEGORIA = req.body.CATEGORIA;
-//     const VALIDADE = req.body.VALIDADE;
-//     const N_TITULO = req.body.N_TITULO;
-//     const EMISSAO = req.body.EMISSAO;
-//     const object_suffix = NOME + N_TITULO;
-//     Google.createObject(issuer_id, class_suffix, object_suffix,NOME,CATEGORIA,VALIDADE,N_TITULO,EMISSAO);
-//     res.send(Google.createJwtExistingObjects(issuer_id,object_suffix,class_suffix));
-// });
+let valores = {};
+valores = object.recebeValores();
 Google.createObject(issuer_id, class_suffix, object_suffix,NOME,CATEGORIA,VALIDADE,N_TITULO,EMISSAO);
-Google.createJwtExistingObjects(issuer_id,object_suffix,class_suffix)
+Google.createJwtExistingObjects(issuer_id,object_suffix,class_suffix);
 
 
 // Create a pass class

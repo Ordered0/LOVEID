@@ -30,7 +30,7 @@ class DemoGeneric {
      * Path to service account key file from Google Cloud Console. Environment
      * variable: GOOGLE_APPLICATION_CREDENTIALS.
      */
-    this.keyFilePath = process.env.GOOGLE_APPLICATION_CREDENTIALS || './key.json';
+    this.keyFilePath = process.env.GOOGLE_APPLICATION_CREDENTIALS || '../key.json';
 
     this.baseUrl = 'https://walletobjects.googleapis.com/walletobjects/v1';
     this.batchUrl = 'https://walletobjects.googleapis.com/batch';
