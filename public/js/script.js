@@ -1,40 +1,28 @@
-// const btn = document.querySelector("#gerar");
-// let valores = {};
-// function recebeValores(){
-//     btn.addEventListener("click",function(e){
-//         e.preventDefault()
-//         valores = {
-//             LINK: document.querySelector("#LINK").value,
-//             NOME: document.querySelector("#NOME").value,
-//             CATEGORIA: document.querySelector("#CATEGORIA").value,
-//             VALIDADE: document.querySelector("#VALIDADE").value,
-//             N_TITULO: document.querySelector("#N_TITULO").value,
-//             EMISSAO: document.querySelector("#EMISSAO").value,
-//         };
-//         valores.object_suffix = valores.NOME + valores.N_TITULO;
-//     });
-//     return valores;
-    
-// }
-
-// module.exports.recebeValores = recebeValores;
-// script.js
-
 function submitForm() {
     const form = document.getElementById('myForm');
-    const formData = new FormData(form);
+    const formData = {
+        NOME: form.querySelector('#NOME').value,
+        CATEGORIA: form.querySelector('#CATEGORIA').value,
+        VALIDADE: form.querySelector('#VALIDADE').value,
+        N_TITULO: form.querySelector('#N_TITULO').value,
+        EMISSAO: form.querySelector('#EMISSAO').value
+    };
+
+    console.log('Form data:', formData);
+    console.log(formData.NOME);
 
     fetch('/submit', {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify(formData),
         headers: {
-            'Content-Type': 'application/json', // Specify the content type
+            'Content-Type': 'application/json'
         },
     })
     .then(response => response.json())
     .then(data => {
         // Update the result div with the received message
-        document.getElementById('LINK').innerHTML = data.message;
+        document.getElementById('LINK').innerHTML = "Adicionar a carteira";
+        document.getElementById('LINK').setAttribute("href", data.message);
     })
     .catch(error => console.error('Error:', error));
 }
