@@ -24,16 +24,6 @@ app.post('/submit', (req, res) => {
     res.json({ message: LINK });
 });
 
-
-// Import the demo class
-
-// Create a demo class instance
-// Creates the authenticated HTTP client
-
-
-
-
-
 // Create a pass class
 //Google.createClass(issuer_id, class_suffix);
 
