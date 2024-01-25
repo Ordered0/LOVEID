@@ -4,8 +4,6 @@ const { PythonShell } = require('python-shell');
 const {DemoGeneric} = require('./demo-generic.js');
 let Google = new DemoGeneric();
 const Apple = require('./apple.js');
-const { link } = require("fs/promises");
-const { log } = require("console");
 const app = express()
 app.listen(3000, () => {
     console.log("Server has started! Open http://localhost:3000")
@@ -30,14 +28,14 @@ app.post('/submit', (req, res) => {
     // res.json({ message: LINK });
 
     // Caminhos para as imagens de entrada e saída
-    const inputImagePath = "C:/Users/rodri/OneDrive/Área de Trabalho/testerembg.jpg";
-    const outputImagePath = "C:/Users/rodri/OneDrive/Área de Trabalho/testerembgresultado3.png";
+    const inputImagePath = "C:/Users/rkoelln/Desktop/iagovargas.jpg";
+    const outputImagePath = "C:/Users/rkoelln/Desktop/iagovargas2.png";
     console.log("olaaaaa")
     // Opções para o script Python
     const options = {
         mode: 'text',
         pythonOptions: ['-u'], // unbuffered output
-        scriptPath: path.join(__dirname,'..'),
+        scriptPath: path.join(__dirname),
         args: [inputImagePath, outputImagePath],
     };
     console.log(options.scriptPath)
