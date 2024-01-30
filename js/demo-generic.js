@@ -313,12 +313,12 @@ class DemoGeneric {
     // See link below for more information on required properties
     // https://developers.google.com/wallet/generic/rest/v1/genericobject
     let newObject = {
-      'id': `${classSuffix}.${objectSuffix}`,
+      'id': `${issuerId}.${objectSuffix}`,
       'classId': `${issuerId}.${classSuffix}`,
       'state': 'ACTIVE',
       'heroImage': {
         'sourceUri': {//imagem principal
-          'uri': 'https://drive.google.com/uc?id=1ryneFJLyt23ZfVDMrpEoxXbZ4UKdBHrlk'
+          'uri': 'https://drive.google.com/uc?id=1ryneFJLyt23ZfVDMrpEoxXbZUKdBHrlk'
         },
         'contentDescription': {
           'defaultValue': {
