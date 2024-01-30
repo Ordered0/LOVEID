@@ -25,8 +25,6 @@ imagemFundo = Image.open("imagemFundo.png")
 imagemSemFundo = imagemSemFundo.resize(tamanhoSemFundo)
 
 imagemFundo.paste(imagemSemFundo,(400,10),imagemSemFundo)
-# Criar uma nova imagem combinando a imagem de fundo e a imagem sem fundo
-#imagemFinal = Image.alpha_composite(imagemFundo.convert('RGBA'), imagemSemFundo)
 
 # Salvar a imagem resultante
 imagemFundo.save(outputPath, quality=95)

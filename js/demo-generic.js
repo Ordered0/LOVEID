@@ -401,7 +401,7 @@ class DemoGeneric {
           'value': `${NOME}`
         }
       },
-      'hexBackgroundColor': '#4285f4',
+      'hexBackgroundColor': '#2C59BA',
       'logo': {
         'sourceUri': {
           'uri': 'https://drive.google.com/uc?id=1Bzk8cOmxqLeqXrvQt7jwcsdHr3Iuz_ZD'
