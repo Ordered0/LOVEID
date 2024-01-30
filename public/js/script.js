@@ -21,8 +21,8 @@ function submitForm() {
     .then(response => response.json())
     .then(data => {
         // Update the result div with the received message
-        document.getElementById('LINK').innerHTML = "Adicionar a carteira";
-        document.getElementById('LINK').setAttribute("href", data.message);
+        //document.getElementById('LINK').innerHTML = "Adicionar a carteira";
+        document.getElementById('LINK').setAttribute("jwt", data.message);
     })
     .catch(error => console.error('Error:', error));
 }
