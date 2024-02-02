@@ -1,3 +1,15 @@
+var urlImagem
+document.getElementById('input-imagem').addEventListener('change', function(e) {
+    // Obtém o arquivo selecionado
+    var arquivo = e.target.files[0];
+
+    if (arquivo) {
+        // Cria um objeto URL para a imagem
+        urlImagem = URL.createObjectURL(arquivo);
+        // Define a URL da imagem como src do elemento img
+        document.getElementById('imagem-preview').setAttribute('src', urlImagem);
+    }
+});
 function submitForm() {
     const form = document.getElementById('myForm');
     const formData = {
@@ -5,7 +17,8 @@ function submitForm() {
         CATEGORIA: form.querySelector('#CATEGORIA').value,
         VALIDADE: form.querySelector('#VALIDADE').value,
         N_TITULO: form.querySelector('#N_TITULO').value,
-        EMISSAO: form.querySelector('#EMISSAO').value
+        EMISSAO: form.querySelector('#EMISSAO').value,
+        IMAGEM: urlImagem
     };
 
     console.log('Form data:', formData);
