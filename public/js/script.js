@@ -22,7 +22,6 @@ function submitForm() {
     };
 
     console.log('Form data:', formData);
-    console.log(formData.NOME);
 
     fetch('/submit', {
         method: 'POST',
