@@ -40,7 +40,7 @@ app.post('/submit', (req, res) => {
     // };
     // console.log(options.scriptPath)
     // // Executar o script Python
-    // PythonShell.run('teste.py', options, function (err, results) {
+    // PythonShell.run('ajeitaImagem.py', options, function (err, results) {
     //     if (err) {
     //         console.error('Erro ao executar o script Python:', err);
     //         res.status(500).json({ error: 'Erro interno do servidor' });
