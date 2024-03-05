@@ -1,18 +1,16 @@
 from rembg import remove
 from PIL import Image
-
+from pathlib import Path
 # Obter os parâmetros passados do Node.js
 
 # Caminho de saída para a imagem resultante
-outputPath = "C:/Users/rkoelln/Desktop/codigos pessoais/public/imagens/oi.png"
+outputPath = "~/codigos-pessoais/public/imagens/final.png"
 
-inputPath = "C:/Users/rkoelln/Desktop/codigos pessoais/public/imagens/teste.jpg"
-
-# Caminho para a imagem de fundo
+inputPath = "~/codigos-pessoais/public/imagens/temp.png"
 
 # Carregar a imagem original
 imagemOriginal = Image.open(inputPath) 
-
+Path.unlink("~/codigos-pessoais/public/imagens/temp.png")
 # Remover o fundo usando rembg
 imagemSemFundo = remove(imagemOriginal).convert('RGBA')
 tamanhoSemFundo = (250,270)

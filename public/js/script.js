@@ -1,7 +1,8 @@
 var urlImagem
+var arquivo
 document.getElementById('input-imagem').addEventListener('change', function(e) {
     // Obtém o arquivo selecionado
-    var arquivo = e.target.files[0];
+    arquivo = e.target.files[0];
 
     if (arquivo) {
         // Cria um objeto URL para a imagem
@@ -18,7 +19,7 @@ function submitForm() {
         VALIDADE: form.querySelector('#VALIDADE').value,
         N_TITULO: form.querySelector('#N_TITULO').value,
         EMISSAO: form.querySelector('#EMISSAO').value,
-        IMAGEM: urlImagem
+        IMAGEM: arquivo
     };
 
     console.log('Form data:', formData);
