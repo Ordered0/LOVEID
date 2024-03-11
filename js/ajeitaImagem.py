@@ -4,18 +4,18 @@ from pathlib import Path
 # Obter os parâmetros passados do Node.js
 
 # Caminho de saída para a imagem resultante
-outputPath = "~/codigos-pessoais/public/imagens/final.png"
+outputPath = "/home/codigos-pessoais/public/imagens/final.png"
 
-inputPath = "~/codigos-pessoais/public/imagens/temp.png"
+inputPath = "/home/codigos-pessoais/public/imagens/temp.png"
 
 # Carregar a imagem original
 imagemOriginal = Image.open(inputPath) 
-Path.unlink("~/codigos-pessoais/public/imagens/temp.png")
+Path.unlink("/home/codigos-pessoais/public/imagens/temp.png")
 # Remover o fundo usando rembg
 imagemSemFundo = remove(imagemOriginal).convert('RGBA')
 tamanhoSemFundo = (250,270)
 # Carregar a imagem de fundo
-imagemFundo = Image.open("C:/Users/rkoelln/Desktop/codigos pessoais/public/imagens/imagemFundo.png")
+imagemFundo = Image.open("/home/codigos-pessoais/imagensBase/fundoGoogle.png")
 # Redimensionar a imagem sem fundo para a mesma dimensão da imagem de fundo
 imagemSemFundo = imagemSemFundo.resize(tamanhoSemFundo)
 

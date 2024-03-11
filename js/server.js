@@ -1,72 +1,68 @@
-const express = require("express")
+const express = require("express");
 const path = require('path');
-// const { PythonShell } = require('python-shell');
-const {DemoGeneric} = require('./demo-generic.js');
-let Google = new DemoGeneric();
-const Apple = require('./apple.js');
-const fs = require('node:fs');
-const app = express()
+const { DemoGeneric } = require('./demo-generic.js');
+const fs = require('fs');
+const { spawn } = require("child_process");
+const bodyParser = require('body-parser');
+const app = express();
+
 app.listen(3000, () => {
     console.log("Server has started! Open http://localhost:3000")
-})
-//app.use(bodyParser.urlencoded({ extended: false }));
+});
+
+app.use(bodyParser.json({ limit: '1mb' }));
+app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
+
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+const logger = fs.createWriteStream("log.txt");
 
 const issuer_id = "3388000000022301521";
 const class_suffix = "testeclube";
 
-
-
-
-
 app.post('/submit', (req, res) => {
     const valuesFromHTML = req.body;
-    console.log('Values from HTML:', valuesFromHTML);
-    try {
-        fs.writeFileSync('~/codigos-pessoais/public/imagens/temp.png', valuesFromHTML.IMAGEM);
-        
-    } catch (err) {
-        console.error(err);
-    }
+    // Logging
+    logger.write('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
 
-    // let object_suffix = valuesFromHTML.NOME + valuesFromHTML.N_TITULO
-    // Google.createObject(issuer_id, class_suffix, object_suffix,valuesFromHTML.NOME,valuesFromHTML.CATEGORIA,valuesFromHTML.VALIDADE,valuesFromHTML.N_TITULO,valuesFromHTML.EMISSAO);
-    // let LINK = Google.createJwtExistingObjects(issuer_id,object_suffix,class_suffix);
-    // res.json({ message: LINK });
-    res.json({ message: LINK });
+    // Extracting image data from the request
+    const imageData = valuesFromHTML.IMAGEM;
+    // Decoding base64 image data
+    const base64Image = imageData.replace(/^data:image\/\w+;base64,/, '');
+    const buffer = Buffer.from(base64Image, 'base64');
 
-    
-    // Opções para o script Python
-    const options = {
-        mode: 'text',
-        pythonOptions: ['-u'], // unbuffered output
-        scriptPath: path.join(__dirname),
-    };
-    // Executar o script Python
-    PythonShell.run('ajeitaImagem.py', options, function (err, results) {
+    // Writing the image file
+    fs.writeFile('/home/codigos-pessoais/public/imagens/temp.png', buffer, (err) => {
         if (err) {
-            console.error('Erro ao formatar imagem:', err);
-            res.status(500).json({ error: 'Erro interno do servidor' });
-        } else {
-            console.log('Resultados do script Python:', results);
-            // Enviar uma resposta ao cliente
-            
+            logger.write(err);
+            res.status(500).send('Error saving the image');
+            return;
         }
+
+        // Once the image is saved, you can proceed with further processing
+        const pythonProcess = spawn('python', ["ajeitaImagem.py"]);
+
+        pythonProcess.on('exit', (code) => {
+            console.log(`Python process exited with code ${code}`);
+
+            // Create object and generate LINK here
+            let object_suffix = valuesFromHTML.NOME + valuesFromHTML.N_TITULO;
+            Google.createObject(
+                issuer_id,
+                class_suffix,
+                object_suffix,
+                valuesFromHTML.NOME,
+                valuesFromHTML.CATEGORIA,
+                valuesFromHTML.VALIDADE,
+                valuesFromHTML.N_TITULO,
+                valuesFromHTML.EMISSAO
+            );
+
+            let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
+
+            res.json({ message: LINK });
+        });
     });
 });
-
-
-
-// Create a demo class instance
-// Creates the authenticated HTTP client
-
-
-
-
-
-// Create a pass class
-//Google.createClass(issuer_id, class_suffix);
-
-// Generate an Add to Google Wallet link that references existing pass object(s)
-//Google.createJwtExistingObjects(issuer_id);
