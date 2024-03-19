@@ -9,15 +9,14 @@ const app = express();
 app.listen(3000, () => {
     console.log("Server has started! Open http://localhost:3000")
 });
-
 app.use(bodyParser.json({ limit: '1mb' }));
 app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
-
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const logger = fs.createWriteStream("log.txt");
+const logger = fs.createWriteStream(path.join(__dirname, 'log.txt'));
+logger.write("logger funcionando");
 
 const issuer_id = "3388000000022301521";
 const class_suffix = "testeclube";
