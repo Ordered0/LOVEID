@@ -1,27 +1,46 @@
+import sys
+import logging
 from rembg import remove
 from PIL import Image
 from pathlib import Path
+
+# Configurar o logger
+logging.basicConfig(filename='loging.log', level=logging.DEBUG)
+
 # Obter os parâmetros passados do Node.js
+newFileName = sys.argv[1]
+outputPath = "/home/rodrigocaiokell/codigos-pessoais/public/imagens/" + newFileName
+inputPath = "/home/rodrigocaiokell/codigos-pessoais/js/uploads/" + newFileName
 
-# Caminho de saída para a imagem resultante
-outputPath = "/home/codigos-pessoais/public/imagens/final.png"
+try:
+    # Carregar a imagem original
+    logging.info(f"Carregando a imagem original de {inputPath}")
+    imagemOriginal = Image.open(inputPath) 
+    Path.unlink(inputPath)
+    
+    # Remover o fundo usando rembg
+    logging.info("Removendo o fundo da imagem")
+    imagemSemFundo = remove(imagemOriginal).convert('RGBA')
+    
+    tamanhoSemFundo = (250, 270)
+    
+    # Carregar a imagem de fundo
+    logging.info("Carregando a imagem de fundo")
+    imagemFundo = Image.open("/home/rodrigocaiokell/codigos-pessoais/imagensBase/fundoGoogle.png")
+    
+    # Redimensionar a imagem sem fundo para a mesma dimensão da imagem de fundo
+    logging.info("Redimensionando a imagem sem fundo")
+    imagemSemFundo = imagemSemFundo.resize(tamanhoSemFundo)
 
-inputPath = "/home/codigos-pessoais/public/imagens/temp.png"
+    imagemFundo.paste(imagemSemFundo, (400, 10), imagemSemFundo)
 
-# Carregar a imagem original
-imagemOriginal = Image.open(inputPath) 
-Path.unlink("/home/codigos-pessoais/public/imagens/temp.png")
-# Remover o fundo usando rembg
-imagemSemFundo = remove(imagemOriginal).convert('RGBA')
-tamanhoSemFundo = (250,270)
-# Carregar a imagem de fundo
-imagemFundo = Image.open("/home/codigos-pessoais/imagensBase/fundoGoogle.png")
-# Redimensionar a imagem sem fundo para a mesma dimensão da imagem de fundo
-imagemSemFundo = imagemSemFundo.resize(tamanhoSemFundo)
+    # Salvar a imagem resultante
+    logging.info(f"Salvando a imagem resultante em {outputPath}")
+    imagemFundo.save(outputPath, quality=95)
 
-imagemFundo.paste(imagemSemFundo,(400,10),imagemSemFundo)
+    logging.info("Imagem final salva com sucesso.")
+    print("Imagem final salva com sucesso em:", outputPath)
 
-# Salvar a imagem resultante
-imagemFundo.save(outputPath, quality=95)
-
-print("Imagem final salva com sucesso em:", outputPath)
+except Exception as e:
+    logging.exception("Ocorreu um erro durante o processamento da imagem:")
+    print("Erro:", e)
