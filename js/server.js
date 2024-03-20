@@ -13,7 +13,6 @@ const port = 3000;
 app.listen(port, () => {
     console.log("Server has started! Open http://localhost:3000")
 });
-
 app.use(bodyParser.json({ limit: '1mb' }));
 app.use(bodyParser.urlencoded({ limit: '1mb', extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
