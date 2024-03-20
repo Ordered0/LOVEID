@@ -9,14 +9,15 @@ logging.basicConfig(filename='loging.log', level=logging.DEBUG)
 
 # Obter os parâmetros passados do Node.js
 newFileName = sys.argv[1]
-outputPath = "/home/rodrigocaiokell/codigos-pessoais/public/imagens/" + newFileName
 inputPath = "/home/rodrigocaiokell/codigos-pessoais/js/uploads/" + newFileName
+newFileName = sys.argv[2]
+outputPath = "/home/rodrigocaiokell/codigos-pessoais/public/imagens/" + newFileName  +".png"
 
 try:
     # Carregar a imagem original
     logging.info(f"Carregando a imagem original de {inputPath}")
     imagemOriginal = Image.open(inputPath) 
-    Path.unlink(inputPath)
+    Path(inputPath).unlink()
     
     # Remover o fundo usando rembg
     logging.info("Removendo o fundo da imagem")

@@ -289,7 +289,7 @@ class DemoGeneric {
    *
    * @returns {string} The pass object ID: `${issuerId}.${objectSuffix}`
    */
-  async createObject(issuerId, classSuffix, objectSuffix,NOME,CATEGORIA,VALIDADE,N_TITULO,EMISSAO) {
+  async createObject(issuerId, classSuffix, objectSuffix,NOME,CATEGORIA,VALIDADE,N_TITULO,EMISSAO,IMAGEM) {
     let response;
 
     // Check if the object exists
@@ -318,7 +318,7 @@ class DemoGeneric {
       'state': 'ACTIVE',
       'heroImage': {
         'sourceUri': {//imagem principal
-          'uri': 'https://drive.google.com/uc?id=1Bzk8cOmxqLeqXrvQt7jwcsdHr3Iuz_ZD'
+          'uri': '34.170.188.29/imagens/' + IMAGEM
         },
         'contentDescription': {
           'defaultValue': {

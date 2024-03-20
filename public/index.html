@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Upload</title>
 </head>
 <body>
-    <form id="myForm">
-        <input type="text" name="NOME" id="NOME" placeholder="digite o nome"><br>
-        <input type="text" name="CATEGORIA" id="CATEGORIA" placeholder="digite a categoria"><br>
-        <input type="text" name="VALIDADE" id="VALIDADE" placeholder="digite a validade"><br>
-        <input type="text" name="N_TITULO" id="N_TITULO" placeholder="digite o n° do titulo"><br>
-        <input type="text" name="EMISSAO" id="EMISSAO" placeholder="digite a data de emisso"><br>
-        <input type="file" id="input-imagem" accept="image/*"><br>
+    <h1>Formulário de Upload de Imagem</h1>
+    <form id="myForm" enctype="multipart/form-data">
+        <label for="NOME">Nome:</label>
+        <input type="text" id="NOME" name="NOME" required><br>
+        <label for="CATEGORIA">Categoria:</label>
+        <input type="text" id="CATEGORIA" name="CATEGORIA" required><br>
+        <label for="VALIDADE">Validade:</label>
+        <input type="text" id="VALIDADE" name="VALIDADE" required><br>
+        <label for="N_TITULO">Número do Título:</label>
+        <input type="text" id="N_TITULO" name="N_TITULO" required><br>
+        <label for="EMISSAO">Data de Emissão:</label>
+        <input type="text" id="EMISSAO" name="EMISSAO" required><br>
+        <label for="imagem">Escolha uma imagem:</label>
+        <input type="file" id="input-imagem" name="image" accept="image/*" required><br>
         <img src="" alt="Imagem" id="imagem-preview" style="max-width: 300px; max-height: 300px;">
-        <input type="button" id="gerar" value="gerar" onclick="submitForm()"><br>
+        <button type="button" id="gerar" onclick="submitForm()">Enviar</button><br>
     </form>
     <a id="LINK"></a>
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
