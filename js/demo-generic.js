@@ -318,7 +318,7 @@ class DemoGeneric {
       'state': 'ACTIVE',
       'heroImage': {
         'sourceUri': {//imagem principal
-          'uri': '34.170.188.29/imagens/' + IMAGEM
+          'uri': 'http://34.170.188.29/imagens/' + IMAGEM
         },
         'contentDescription': {
           'defaultValue': {

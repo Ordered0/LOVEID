@@ -54,7 +54,7 @@ app.post('/submit', upload.single('image'), (req, res) => {
             issuer_id,
             class_suffix,
             object_suffix,
-            valuesFromHTML.NOME,
+            valuesFromHTML.NOME.replace(/\s/g, ''),
             valuesFromHTML.CATEGORIA,
             valuesFromHTML.VALIDADE,
             valuesFromHTML.N_TITULO,
