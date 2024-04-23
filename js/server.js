@@ -6,6 +6,7 @@ const fs = require('fs');
 const { spawn } = require("child_process");
 const bodyParser = require('body-parser');
 const multer = require('multer');
+const db = require('./database');
 
 const app = express();
 const port = 3000;
@@ -49,12 +50,28 @@ app.post('/submit', upload.single('image'), (req, res) => {
         console.log(`Python process exited with code ${code}`);
 
         // Create object and generate LINK here
-        let object_suffix = valuesFromHTML.NOME + valuesFromHTML.N_TITULO;
+        let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '') + valuesFromHTML.N_TITULO;
+        
+        const queryTeste = `
+        INSERT INTO usuario (cod_usuario, email)
+        VALUES($1,$2)
+        RETURNING *;`;
+        db.query(queryTeste,[1,"email.com"])
+        .then(result => {
+          // A inserção foi bem-sucedida
+          console.log('Inserção bem-sucedida:', result.rows[0]);
+        })
+        .catch(err => {
+          // Trate o erro adequadamente
+          console.error('Erro ao inserir dados:', err);
+        });
+
+
         Google.createObject(
             issuer_id,
             class_suffix,
             object_suffix,
-            valuesFromHTML.NOME.replace(/\s/g, ''),
+            valuesFromHTML.NOME,
             valuesFromHTML.CATEGORIA,
             valuesFromHTML.VALIDADE,
             valuesFromHTML.N_TITULO,
