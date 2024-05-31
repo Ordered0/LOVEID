@@ -44,15 +44,15 @@ app.post('/submit', upload.single('image'), (req, res) => {
     const valuesFromHTML = req.body;
     // Logging
     console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
-    // Once the image is saved, you can proceed with further processing
-    const pythonProcess = spawn('/usr/bin/python3', ["/home/rodrigocaiokell/codigos-pessoais/js/ajeitaImagem.py",newFileName,uniqueSuffix]);
+    // faz o processamento da imagem com python
+    const pythonProcess = spawn('/home/rodrigo/codigos-pessoais/js/myenv/bin/python3', ["/home/rodrigo/codigos-pessoais/js/ajeitaImagem.py",newFileName,uniqueSuffix]);
     pythonProcess.on('exit', (code) => {
         console.log(`Python process exited with code ${code}`);
 
         // Create object and generate LINK here
-        let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '') + valuesFromHTML.N_TITULO;
+        let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
         
-        const queryTeste = `
+        /* const queryTeste = `
         INSERT INTO usuario (cod_usuario, email)
         VALUES($1,$2)
         RETURNING *;`;
@@ -65,14 +65,14 @@ app.post('/submit', upload.single('image'), (req, res) => {
           // Trate o erro adequadamente
           console.error('Erro ao inserir dados:', err);
         });
-
+ */
 
         Google.createObject(
             issuer_id,
             class_suffix,
             object_suffix,
-            valuesFromHTML.NOME,
-            valuesFromHTML.CATEGORIA,
+            valuesFromHTML.NOME.toUpperCase(),
+            valuesFromHTML.CATEGORIA.toUpperCase(),
             valuesFromHTML.VALIDADE,
             valuesFromHTML.N_TITULO,
             valuesFromHTML.EMISSAO,

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Upload</title>
+    <title>Gerador Google</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>Formulário de Upload de Imagem</h1>
+    <h1>Gerador de Cartões</h1>
     <form id="myForm" enctype="multipart/form-data">
         <label for="NOME">Nome:</label>
         <input type="text" id="NOME" name="NOME" required><br>
@@ -24,6 +25,10 @@
         <button type="button" id="gerar" onclick="submitForm()">Enviar</button><br>
     </form>
     <a id="LINK"></a>
+    <div id="loader-container" class="loader-container">
+        <span>Carregando</span>
+        <div class="loader"></div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

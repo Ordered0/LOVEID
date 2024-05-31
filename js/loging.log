@@ -1,0 +1,431 @@
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716425886053-957469135.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+DEBUG:urllib3.connectionpool:https://github.com:443 "GET /danielgatis/rembg/releases/download/v0.0.0/u2net.onnx HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): objects.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://objects.githubusercontent.com:443 "GET /github-production-release-asset-2e65be/286500101/e39324e8-fce7-44ee-ae2f-12c49df29c51?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20240523%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240523T013948Z&X-Amz-Expires=300&X-Amz-Signature=3efc0976a4268e4050bc1c4590b0cfec648bcd2b6c519499b89614ab9fea71ce&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=286500101&response-content-disposition=attachment%3B%20filename%3Du2net.onnx&response-content-type=application%2Foctet-stream HTTP/1.1" 200 175997641
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716425886053-957469135.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716429947622-896687114.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716429947622-896687114.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716430013077-826351683.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716430013077-826351683.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716430193703-812181635.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716430193703-812181635.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716430376695-441495859.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716430376695-441495859.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716430485431-894493169.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716430485431-894493169.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716491193179-75956633.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716491193179-75956633.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716491539498-680363576.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716491539498-680363576.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716491551258-900819575.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716491551258-900819575.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492107419-213704749.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492107419-213704749.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492179168-38235289.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492179168-38235289.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492403647-296930486.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492403647-296930486.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492430318-201410110.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492430318-201410110.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492437385-810901247.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492437385-810901247.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492459151-148564650.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492459151-148564650.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492585887-265397566.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492585887-265397566.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716492641407-881844701.png
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 41 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 41 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 57 25
+DEBUG:PIL.PngImagePlugin:STREAM b'tEXt' 94 45
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 151 8192
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716492641407-881844701.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716494681125-374361753.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716494681125-374361753.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716494817236-893596087.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716494817236-893596087.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716494938289-28947756.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716494938289-28947756.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716494968718-163215016.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716494968718-163215016.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716639364941-436451279.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716639364941-436451279.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716641375712-972967484.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716641375712-972967484.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716641407844-724459397.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716641407844-724459397.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716642789613-20189199.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716642789613-20189199.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716643544084-243052015.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716643544084-243052015.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716644521992-577952583.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716644521992-577952583.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716644747015-103687014.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716644747015-103687014.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/codigos-pessoais/js/uploads/1716645352698-932520199.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/rodrigo/codigos-pessoais/public/imagens/1716645352698-932520199.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/rodrigo/Downloads/mariclube.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Carregando a imagem original de /home/rodrigo/Downloads/valdecir.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Redimensionando a imagem sem fundo

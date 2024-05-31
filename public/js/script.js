@@ -1,6 +1,10 @@
 function submitForm() {
     const form = document.getElementById('myForm');
-    const formData = new FormData(form); // Use FormData para enviar os dados do f>
+    const formData = new FormData(form);
+    console.log(formData);
+
+    const loadercontainer = document.getElementById("loader-container");
+    loadercontainer.style.display = "flex";
 
     fetch('/submit', {
         method: 'POST',
@@ -8,10 +12,13 @@ function submitForm() {
     })
     .then(response => response.json())
     .then(data => {
-        // Update the result div with the received message
+        loadercontainer.style.display = "none";
         document.getElementById('LINK').innerHTML = "Adicionar a carteira";
         document.getElementById('LINK').setAttribute("href", data.message);
         console.log(data.message);
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        loadercontainer.style.display = "none";
+    });
 }

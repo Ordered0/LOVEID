@@ -318,7 +318,7 @@ class DemoGeneric {
       'state': 'ACTIVE',
       'heroImage': {
         'sourceUri': {//imagem principal
-          'uri': 'http://34.170.188.29/imagens/' + IMAGEM
+          'uri': 'https://972161f864141fc54a5a4127cbd3f91d.serveo.net/imagens/' + IMAGEM
         },
         'contentDescription': {
           'defaultValue': {
