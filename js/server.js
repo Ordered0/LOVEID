@@ -55,7 +55,7 @@ app.post('/novo', upload.single('image'), (req, res) => {
   console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
 
   // faz o processamento da imagem com python
-  if(cortaFundo(Foto,nomeAleatorio)!=0){
+  if(cortaFundo(nomeArquivo,nomeAleatorio)!=0){
     res.json({ message:'errpy'});
   }
   
