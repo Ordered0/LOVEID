@@ -45,13 +45,12 @@ app.post('/submit', upload.single('image'), (req, res) => {
     // Logging
     console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
     // faz o processamento da imagem com python
-    const pythonProcess = spawn('/home/rodrigo/codigos-pessoais/js/myenv/bin/python3', ["/home/rodrigo/codigos-pessoais/js/ajeitaImagem.py",newFileName,uniqueSuffix]);
+    const pythonProcess = spawn('/home/LOVEID/js/myenv/bin/python3', ["/home/LOVEID/js/ajeitaImagem.py",newFileName,uniqueSuffix]);
     pythonProcess.on('exit', (code) => {
         console.log(`Python process exited with code ${code}`);
 
         // Create object and generate LINK here
         let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
-        
         /* const queryTeste = `
         INSERT INTO usuario (cod_usuario, email)
         VALUES($1,$2)
