@@ -429,3 +429,62 @@ INFO:root:Redimensionando a imagem sem fundo
 INFO:root:Carregando a imagem original de /home/rodrigo/Downloads/valdecir.jpeg
 INFO:root:Removendo o fundo da imagem
 INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Carregando a imagem original de /home/LOVEID/js/uploads/1717191914316-42074613.jpeg
+INFO:root:Removendo o fundo da imagem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+DEBUG:urllib3.connectionpool:https://github.com:443 "GET /danielgatis/rembg/releases/download/v0.0.0/u2net.onnx HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): objects.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://objects.githubusercontent.com:443 "GET /github-production-release-asset-2e65be/286500101/e39324e8-fce7-44ee-ae2f-12c49df29c51?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20240531%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240531T214621Z&X-Amz-Expires=300&X-Amz-Signature=e477748c290e81f7f16b2aeac2101f76935f4371c44e4b0ac70adf325b3617e3&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=286500101&response-content-disposition=attachment%3B%20filename%3Du2net.onnx&response-content-type=application%2Foctet-stream HTTP/1.1" 200 175997641
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/LOVEID/public/imagens/1717191914316-42074613.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/LOVEID/js/uploads/1717192332575-243412801.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/LOVEID/public/imagens/1717192332575-243412801.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/LOVEID/js/uploads/1717192391671-998257913.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/LOVEID/public/imagens/1717192391671-998257913.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/LOVEID/js/uploads/1717192631605-220663385.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/LOVEID/public/imagens/1717192631605-220663385.png
+INFO:root:Imagem final salva com sucesso.
+INFO:root:Carregando a imagem original de /home/LOVEID/js/uploads/1717194872588-634495879.jpeg
+INFO:root:Removendo o fundo da imagem
+INFO:root:Carregando a imagem de fundo
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 62 1
+DEBUG:PIL.PngImagePlugin:STREAM b'gAMA' 75 4
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 91 173091
+INFO:root:Redimensionando a imagem sem fundo
+INFO:root:Salvando a imagem resultante em /home/LOVEID/public/imagens/1717194872588-634495879.png
+INFO:root:Imagem final salva com sucesso.

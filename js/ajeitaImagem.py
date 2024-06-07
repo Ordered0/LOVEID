@@ -9,9 +9,9 @@ logging.basicConfig(filename='loging.log', level=logging.DEBUG)
 
 # Obter os parâmetros passados do Node.js
 newFileName = sys.argv[1]
-inputPath = "/home/rodrigo/codigos-pessoais/js/uploads/" + newFileName
+inputPath = "/home/LOVEID/js/uploads/" + newFileName
 newFileName = sys.argv[2]
-outputPath = "/home/rodrigo/codigos-pessoais/public/imagens/" + newFileName  +".png"
+outputPath = "/home/LOVEID/public/imagens/" + newFileName  +".png"
 
 try:
     # Carregar a imagem original
@@ -27,7 +27,7 @@ try:
     
     # Carregar a imagem de fundo
     logging.info("Carregando a imagem de fundo")
-    imagemFundo = Image.open("/home/rodrigo/codigos-pessoais/imagensBase/fundoGoogle.png")
+    imagemFundo = Image.open("/home/LOVEID/imagensBase/fundoGoogle.png")
     
     # Redimensionar a imagem sem fundo para a mesma dimensão da imagem de fundo
     logging.info("Redimensionando a imagem sem fundo")
