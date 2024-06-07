@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>Gerador de Cartões</h1>
+    <h1>Gerenciador de Cartões</h1>
     <form id="myForm" enctype="multipart/form-data">
         <label for="NOME">Nome:</label>
         <input type="text" id="NOME" name="NOME" required><br>
@@ -22,7 +22,9 @@
         <label for="imagem">Escolha uma imagem:</label>
         <input type="file" id="input-imagem" name="image" accept="image/*" required><br>
         <img src="" alt="Imagem" id="imagem-preview" style="max-width: 300px; max-height: 300px;">
-        <button type="button" id="gerar" onclick="submitForm()">Enviar</button><br>
+        <button type="button" id="gerar" onclick="submitForm('novo')">Gerar Novo Card</button><br>
+        <button type="button" id="atualizar" onclick="submitForm('atualiza')">Atualizar Card Existente</button><br>
+        <button type="button" id="excluir" onclick="submitForm('excluir')">excluir Card Existente</button><br>
     </form>
     <a id="LINK"></a>
     <div id="loader-container" class="loader-container">

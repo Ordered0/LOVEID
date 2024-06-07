@@ -1,3 +1,4 @@
+//declaração das bibliotecas e arquivos linkados
 const express = require("express");
 const path = require('path');
 const {DemoGeneric} = require('./demo-generic.js');
@@ -25,61 +26,124 @@ const issuer_id = "3388000000022301521";
 const class_suffix = "testeclube";
 
 // Configuração do multer para lidar com o upload de imagens
-let newFileName, uniqueSuffix;
+let nomeArquivo, nomeAleatorio;
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/')
   },
   filename: function (req, file, cb) {
-    uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    nomeAleatorio = Date.now() + '-' + Math.round(Math.random() * 1E9);
     const fileExtension = path.extname(file.originalname);
-    newFileName = uniqueSuffix + fileExtension;
-    cb(null, newFileName);
+    nomeArquivo = nomeAleatorio + fileExtension;
+    cb(null, nomeArquivo);
   }
 });
 const upload = multer({ storage: storage });
 
-// Rota para lidar com o upload da imagem e os dados do formulário
-app.post('/submit', upload.single('image'), (req, res) => {
+//funcao que chama o python para trabalhar com as imagens
+function cortaFundo(Foto,nomeAleatorio) {
+  const pythonProcess = spawn('/home/rodrigo/codigos-pessoais/js/myenv/bin/python3', ["/home/rodrigo/codigos-pessoais/js/ajeitaImagem.py",Foto,nomeAleatorio]);
+  pythonProcess.on('exit', (code) => {
+    return(code);
+  });
+}
+
+// Rota para gerar um card nao existente
+app.post('/novo', upload.single('image'), (req, res) => {
     const valuesFromHTML = req.body;
-    // Logging
+
     console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
+
     // faz o processamento da imagem com python
-    const pythonProcess = spawn('/home/rodrigo/codigos-pessoais/js/myenv/bin/python3', ["/home/rodrigo/codigos-pessoais/js/ajeitaImagem.py",newFileName,uniqueSuffix]);
-    pythonProcess.on('exit', (code) => {
-        console.log(`Python process exited with code ${code}`);
+    if(cortaFundo(Foto,nomeAleatorio)!=0){
+      res.json({ message:'errpy'});
+    }
+    
+    //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
+    let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
+    
+    //chama a função que cria o objeto do cartão
+    Google.createObject(
+        issuer_id,
+        class_suffix,
+        object_suffix,
+        valuesFromHTML.NOME.toUpperCase(),
+        valuesFromHTML.CATEGORIA.toUpperCase(),
+        valuesFromHTML.VALIDADE,
+        valuesFromHTML.N_TITULO,
+        valuesFromHTML.EMISSAO,
+        uniqueSuffix + '.png'
+    );
 
-        // Create object and generate LINK here
-        let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
-        
-        /* const queryTeste = `
-        INSERT INTO usuario (cod_usuario, email)
-        VALUES($1,$2)
-        RETURNING *;`;
-        db.query(queryTeste,[1,"email.com"])
-        .then(result => {
-          // A inserção foi bem-sucedida
-          console.log('Inserção bem-sucedida:', result.rows[0]);
-        })
-        .catch(err => {
-          // Trate o erro adequadamente
-          console.error('Erro ao inserir dados:', err);
-        });
- */
-
-        Google.createObject(
-            issuer_id,
-            class_suffix,
-            object_suffix,
-            valuesFromHTML.NOME.toUpperCase(),
-            valuesFromHTML.CATEGORIA.toUpperCase(),
-            valuesFromHTML.VALIDADE,
-            valuesFromHTML.N_TITULO,
-            valuesFromHTML.EMISSAO,
-            uniqueSuffix + '.png'
-        );
-
-        let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
-        res.json({ message: LINK });
-    });
+    //gera o link para que poçamos adicionar o cartão
+    let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
+    res.json({ message: LINK });
 });
+
+//atualiza as informações de um card
+app.post('/atualiza', upload.single('image'), (req, res) => {
+  const valuesFromHTML = req.body;
+
+  console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
+
+  // faz o processamento da imagem com python
+  if(cortaFundo(Foto,nomeAleatorio)!=0){
+    res.json({ message:'errpy'});
+  }
+  
+  //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
+  let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
+  
+  //chama a função que cria o objeto do cartão
+  Google.patchObject(
+      issuer_id,
+      object_suffix
+  );
+
+  //gera o link para que poçamos adicionar o cartão
+  let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
+  res.json({ message: LINK });
+});
+
+//exclui um card
+app.post('/excluir', upload.single('image'), (req, res) => {
+  const valuesFromHTML = req.body;
+
+  console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
+
+  // faz o processamento da imagem com python
+  if(cortaFundo(Foto,nomeAleatorio)!=0){
+    res.json({ message:'errpy'});
+  }
+  
+  //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
+  let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
+  
+  //chama a função que cria o objeto do cartão
+  Google.expireObject(
+      issuer_id,
+      object_suffix
+  );
+
+  //gera o link para que poçamos adicionar o cartão
+  let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
+  res.json({ message: LINK });
+});
+
+
+
+
+/* const queryTeste = `
+    INSERT INTO usuario (cod_usuario, email)
+    VALUES($1,$2)
+    RETURNING *;`;
+    db.query(queryTeste,[1,"email.com"])
+    .then(result => {
+    // A inserção foi bem-sucedida
+      console.log('Inserção bem-sucedida:', result.rows[0]);
+    })
+    .catch(err => {
+      // Trate o erro adequadamente
+      console.error('Erro ao inserir dados:', err);
+    });
+    */
