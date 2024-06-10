@@ -106,15 +106,10 @@ res.json({ message: LINK });
 });
 
 //exclui um card
-app.post('/excluir', upload.single('image'), (req, res) => {
+app.post('/excluir',(req, res) => {
 const valuesFromHTML = req.body;
 
 console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
-
-// faz o processamento da imagem com python
-if(cortaFundo(Foto,nomeAleatorio)!=0){
-  res.json({ message:'errpy'});
-}
 
 //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
 let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
