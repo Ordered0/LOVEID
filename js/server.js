@@ -44,6 +44,7 @@ const upload = multer({ storage: storage });
 function cortaFundo(Foto,nomeAleatorio) {
   const pythonProcess = spawn('/home/LOVEID/js/myenv/bin/python3', ["/home/LOVEID/js/ajeitaImagem.py",Foto,nomeAleatorio]);
   pythonProcess.on('exit', (code) => {
+    console.log(code);
     return(code);
   });
 }
