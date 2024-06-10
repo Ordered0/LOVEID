@@ -75,7 +75,7 @@ app.post('/novo', upload.single('image'), (req, res) => {
       valuesFromHTML.VALIDADE,
       valuesFromHTML.N_TITULO,
       valuesFromHTML.EMISSAO,
-      uniqueSuffix + '.png'
+      nomeAleatorio + '.png'
   );
 
   //gera o link para que poçamos adicionar o cartão
