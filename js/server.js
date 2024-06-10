@@ -41,11 +41,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //funcao que chama o python para trabalhar com as imagens
-function cortaFundo(Foto,nomeAleatorio) {
+function cortaFundo(Foto,nomeAleatorio,callback) {
   const pythonProcess = spawn('/home/LOVEID/js/myenv/bin/python3', ["/home/LOVEID/js/ajeitaImagem.py",Foto,nomeAleatorio]);
   pythonProcess.on('exit', (code) => {
     console.log(code);
-    return(code);
+    if(callback){
+      callback(code);
+    }
   });
 }
 
@@ -56,9 +58,9 @@ app.post('/novo', upload.single('image'), (req, res) => {
   console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
 
   // faz o processamento da imagem com python
-  teste = cortaFundo(nomeArquivo,nomeAleatorio);
-  console.log("teste"+teste);
-  if(teste != 0){
+  cortaFundo(nomeArquivo,nomeAleatorio,(code));
+  console.log("teste"+code);
+  if(code != 0){
     res.json({ message:'errpy'});
   }
   
