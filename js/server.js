@@ -57,6 +57,7 @@ app.post('/novo', upload.single('image'), (req, res) => {
 
   // faz o processamento da imagem com python
   teste = cortaFundo(nomeArquivo,nomeAleatorio);
+  console.log("teste"+teste);
   if(teste != 0){
     res.json({ message:'errpy'});
   }
