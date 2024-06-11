@@ -1,7 +1,6 @@
 function submitForm(acao) {
     const form = document.getElementById('myForm');
     const formData = new FormData(form);
-    console.log(formData);
 
     const loadercontainer = document.getElementById("loader-container");
     loadercontainer.style.display = "flex";
@@ -9,7 +8,8 @@ function submitForm(acao) {
     if (acao === 'excluir') {
         formData.delete('image');  // Remove o campo da imagem para a ação de exclusão
     }
-
+    console.log(formData);
+    
     fetch("/" + acao, {
         method: 'POST',
         body: formData, // Envie os dados do formulário diretamente
