@@ -12,7 +12,7 @@ function submitForm(acao) {
     .then(response => response.json())
     .then(data => {
         loadercontainer.style.display = "none";
-        if(data.message = 'errpy'){
+        if(data.message == 'errpy'){
             document.getElementById('LINK').innerHTML = "Aconteceu um erro no processamento da imagem";
         }else{
             document.getElementById('LINK').innerHTML = "Adicionar a carteira";
