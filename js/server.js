@@ -80,33 +80,39 @@ app.post('/novo', upload.single('image'), (req, res) => {
   
     //gera o link para que poçamos adicionar o cartão
     let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
-    res.json({ message: LINK });
+    res.json({ 
+      message: "Adicionar a carteira",
+      link:LINK
+    });
   });
 });
 
 //atualiza as informações de um card
 app.post('/atualiza', upload.single('image'), (req, res) => {
-const valuesFromHTML = req.body;
+  const valuesFromHTML = req.body;
 
-console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
+  console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
 
-// faz o processamento da imagem com python
-if(cortaFundo(Foto,nomeAleatorio)!=0){
-  res.json({ message:'errpy'});
-}
+  // faz o processamento da imagem com python
+  if(cortaFundo(Foto,nomeAleatorio)!=0){
+    res.json({ message:'errpy'});
+  }
 
-//aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
-let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
+  //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
+  let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
 
-//chama a função que cria o objeto do cartão
-Google.patchObject(
-    issuer_id,
-    object_suffix
-);
+  //chama a função que cria o objeto do cartão
+  Google.patchObject(
+      issuer_id,
+      object_suffix
+  );
 
-//gera o link para que poçamos adicionar o cartão
-let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
-res.json({ message: LINK });
+  //gera o link para que poçamos adicionar o cartão
+  let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
+  res.json({ 
+    message: "Adicionar a carteira",
+    link:LINK
+  });
 });
 
 //exclui um card
@@ -124,9 +130,7 @@ Google.expireObject(
     object_suffix
 );
 
-//gera o link para que poçamos adicionar o cartão
-let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
-res.json({ message: LINK });
+res.json({ message: 'excluido' });
 });
 
 
