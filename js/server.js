@@ -67,6 +67,7 @@ app.post('/novo', upload.single('image'), (req, res) => {
   //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
   let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
   
+  console.log(nomeAleatorio + ".png");
   //chama a função que cria o objeto do cartão
   Google.createObject(
       issuer_id,
