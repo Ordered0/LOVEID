@@ -20,9 +20,9 @@ function submitForm(acao) {
         if(data.message == 'errpy'){
             document.getElementById('LINK').innerHTML = "Aconteceu um erro no processamento da imagem";
         }else{
-            document.getElementById('LINK').innerHTML = "Adicionar a carteira";
-            document.getElementById('LINK').setAttribute("href", data.message);
-            console.log(data.message);
+            document.getElementById('LINK').innerHTML = data.message;
+            document.getElementById('LINK').setAttribute("href", data.link);
+            console.log(data.link);
         }
     })
     .catch(error => {
