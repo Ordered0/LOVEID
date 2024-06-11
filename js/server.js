@@ -61,29 +61,27 @@ app.post('/novo', upload.single('image'), (req, res) => {
     if(code != 0){
       res.json({ message:'errpy'});
     }
+    //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
+    let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
+    
+    console.log(nomeAleatorio + ".png");
+    //chama a função que cria o objeto do cartão
+    Google.createObject(
+        issuer_id,
+        class_suffix,
+        object_suffix,
+        valuesFromHTML.NOME.toUpperCase(),
+        valuesFromHTML.CATEGORIA.toUpperCase(),
+        valuesFromHTML.VALIDADE,
+        valuesFromHTML.N_TITULO,
+        valuesFromHTML.EMISSAO,
+        nomeAleatorio + ".png"
+    );
+  
+    //gera o link para que poçamos adicionar o cartão
+    let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
+    res.json({ message: LINK });
   });
-  
-  
-  //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
-  let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
-  
-  console.log(nomeAleatorio + ".png");
-  //chama a função que cria o objeto do cartão
-  Google.createObject(
-      issuer_id,
-      class_suffix,
-      object_suffix,
-      valuesFromHTML.NOME.toUpperCase(),
-      valuesFromHTML.CATEGORIA.toUpperCase(),
-      valuesFromHTML.VALIDADE,
-      valuesFromHTML.N_TITULO,
-      valuesFromHTML.EMISSAO,
-      nomeAleatorio + ".png"
-  );
-
-  //gera o link para que poçamos adicionar o cartão
-  let LINK = Google.createJwtExistingObjects(issuer_id, object_suffix, class_suffix);
-  res.json({ message: LINK });
 });
 
 //atualiza as informações de um card
