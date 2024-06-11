@@ -41,7 +41,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //funcao que chama o python para trabalhar com as imagens
-function cortaFundo(Foto,nomeAleatorio,callback) {
+function cortaFundo(Foto, nomeAleatorio, callback) {
   const pythonProcess = spawn('/home/LOVEID/js/myenv/bin/python3', ["/home/LOVEID/js/ajeitaImagem.py",Foto,nomeAleatorio]);
   pythonProcess.on('exit', (code) => {
     console.log(code);
@@ -58,11 +58,13 @@ app.post('/novo', upload.single('image'), (req, res) => {
   console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
 
   // faz o processamento da imagem com python
-  cortaFundo(nomeArquivo,nomeAleatorio,(code));
-  console.log("teste"+code);
-  if(code != 0){
-    res.json({ message:'errpy'});
-  }
+  cortaFundo(nomeArquivo,nomeAleatorio,(code) =>{
+    console.log("teste"+code);
+    if(code != 0){
+      res.json({ message:'errpy'});
+    }
+  });
+  
   
   //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
   let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
