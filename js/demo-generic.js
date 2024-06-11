@@ -585,7 +585,7 @@ class DemoGeneric {
 
     // Patch the object, setting the pass as expired
     let patchBody = {
-      'state': 'ACTIVE'
+      'state': 'EXPIRED'
     };
 
     response = await this.httpClient.request({
