@@ -5,7 +5,11 @@ function submitForm(acao) {
 
     const loadercontainer = document.getElementById("loader-container");
     loadercontainer.style.display = "flex";
-    
+
+    if (acao === 'excluir') {
+        formData.delete('image');  // Remove o campo da imagem para a ação de exclusão
+    }
+
     fetch("/" + acao, {
         method: 'POST',
         body: formData, // Envie os dados do formulário diretamente
