@@ -44,7 +44,6 @@ const upload = multer({ storage: storage });
 function cortaFundo(Foto, nomeAleatorio, callback) {
   const pythonProcess = spawn('/home/LOVEID/js/myenv/bin/python3', ["/home/LOVEID/js/ajeitaImagem.py",Foto,nomeAleatorio]);
   pythonProcess.on('exit', (code) => {
-    console.log(code);
     if(callback){
       callback(code);
     }
@@ -59,7 +58,6 @@ app.post('/novo', upload.single('image'), (req, res) => {
 
   // faz o processamento da imagem com python
   cortaFundo(nomeArquivo,nomeAleatorio,(code) =>{
-    console.log("teste"+code);
     if(code != 0){
       res.json({ message:'errpy'});
     }
@@ -79,7 +77,7 @@ app.post('/novo', upload.single('image'), (req, res) => {
       valuesFromHTML.VALIDADE,
       valuesFromHTML.N_TITULO,
       valuesFromHTML.EMISSAO,
-      nomeAleatorio + '.png'
+      nomeAleatorio + ".png"
   );
 
   //gera o link para que poçamos adicionar o cartão
