@@ -110,7 +110,7 @@ res.json({ message: LINK });
 });
 
 //exclui um card
-app.post('/excluir',(req, res) => {
+app.post('/excluir',upload.none(),(req, res) => {
 const valuesFromHTML = req.body;
 
 console.log('Values from HTML: ' + JSON.stringify(valuesFromHTML) + '\n');
