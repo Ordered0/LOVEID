@@ -61,6 +61,8 @@ app.post('/novo', upload.single('image'), (req, res) => {
     if(code != 0){
       res.json({ message:'errpy'});
     }
+
+    console.log(code);
     //aqui define o codigo do cartão, neste caso é o nome sem espaços e maiusculo + o numero do ditulo
     let object_suffix = valuesFromHTML.NOME.replace(/\s/g, '').toUpperCase() + valuesFromHTML.N_TITULO;
     
