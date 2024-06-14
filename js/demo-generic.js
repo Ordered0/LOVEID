@@ -367,7 +367,7 @@ class DemoGeneric {
         {
           'mainImage': {
             'sourceUri': {
-              'uri': 'https://drive.google.com/uc?id=1Bzk8cOmxqLeqXrvQt7jwcsdHr3Iuz_ZD'
+              'uri': 'http://91.108.124.127:3000/imagens/logoclube.png'
             },
             'contentDescription': {
               'defaultValue': {
@@ -404,7 +404,7 @@ class DemoGeneric {
       'hexBackgroundColor': '#2C59BA',
       'logo': {
         'sourceUri': {
-          'uri': 'https://drive.google.com/uc?id=1Bzk8cOmxqLeqXrvQt7jwcsdHr3Iuz_ZD'
+          'uri': 'http://91.108.124.127:3000/imagens/logoclube.png'
         },
         'contentDescription': {
           'defaultValue': {
