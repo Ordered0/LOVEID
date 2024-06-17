@@ -137,7 +137,18 @@ Google.expireObject(
 res.json({ message: 'excluido' });
 });
 
-
+//pega a imagem e a processa para que a pessoa saiba como vai ser o resultado
+app.post('/preview', upload.single('image'), (req, res) => {
+  // faz o processamento da imagem com python
+  cortaFundo(nomeArquivo,nomeAleatorio,(code) =>{
+    if(code != 0){
+      res.json({ message:'errpy'});
+    }
+    res.json({ 
+      imagem : nomeAleatorio + "png"
+    });
+  });
+});
 
 
 /* const queryTeste = `

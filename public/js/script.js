@@ -23,6 +23,9 @@ function submitForm(acao) {
             document.getElementById('LINK').innerHTML = data.message;
             document.getElementById('LINK').setAttribute("href", data.link);
             console.log(data.link);
+            if(data.imagem){
+                document.getElementById('imagem-preview').setAttribute("src",data.imagem);
+            }
         }
     })
     .catch(error => {
