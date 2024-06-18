@@ -23,7 +23,7 @@ try:
     logging.info("Removendo o fundo da imagem")
     imagemSemFundo = remove(imagemOriginal).convert('RGBA')
     
-    tamanhoSemFundo = (250, 270)
+    tamanhoSemFundo = (576, 576)
     
     # Carregar a imagem de fundo
     logging.info("Carregando a imagem de fundo")
