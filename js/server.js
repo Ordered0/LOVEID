@@ -145,7 +145,7 @@ app.post('/preview', upload.single('image'), (req, res) => {
       res.json({ message:'errpy'});
     }
     res.json({ 
-      imagem : nomeAleatorio + "png"
+      imagem : nomeAleatorio + ".png"
     });
   });
 });
