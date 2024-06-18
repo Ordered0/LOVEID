@@ -24,7 +24,8 @@ function submitForm(acao) {
             document.getElementById('LINK').setAttribute("href", data.link);
             console.log(data.link);
             if(data.imagem){
-                document.getElementById('imagem-preview').setAttribute("src",data.imagem);
+                imagem = '/imagens' + data.imagem;
+                document.getElementById('imagem-preview').setAttribute("src",imagem);
             }
         }
     })
