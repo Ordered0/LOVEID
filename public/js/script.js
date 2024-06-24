@@ -19,6 +19,9 @@ function submitForm(acao) {
         loadercontainer.style.display = "none";
         if(data.message == 'errpy'){
             document.getElementById('LINK').innerHTML = "Aconteceu um erro no processamento da imagem";
+        }else if(data.imagem){
+            imagem = './imagens/' + data.imagem;
+            document.getElementById('imagem-preview').setAttribute("src",imagem);
         }else{
             document.getElementById('LINK').innerHTML = data.message;
             document.getElementById('LINK').setAttribute("href", data.link);
